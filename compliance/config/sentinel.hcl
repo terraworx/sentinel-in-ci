@@ -13,7 +13,7 @@ sentinel {
 // -------------------------------------------------------------
 import "plugin" "tfplan/v2" {
   config = {
-    "plan_path": "../../../terraform/plan.json"
+    "plan_path": "../../terraform/plan.json"
   }
 }
 
@@ -21,14 +21,14 @@ import "plugin" "tfplan/v2" {
 // MODULES
 // -------------------------------------------------------------
 import "module" "eval" {
-  source = "../../imports/modules/eval/eval.sentinel"
+  source = "../imports/modules/eval/eval.sentinel"
 }
 
 // -------------------------------------------------------------
 // POLICIES
 // -------------------------------------------------------------
 policy "fws001" {
-  source            = "../../policies/fakewebservices_server.sentinel"
+  source            = "../policies/fakewebservices_server.sentinel"
   enforcement_level = "advisory"
 }
 

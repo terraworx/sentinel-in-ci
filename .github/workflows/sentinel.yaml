@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VERSION: '0.24.1'
-      WORKING_DIR: compliance/config
 
     steps:
       - uses: actions/checkout@v3
@@ -20,5 +19,5 @@ jobs:
           echo "/tmp/sentinel" >> $GITHUB_PATH
 
       - name: Policy Evaluation
-        run: sentinel apply -config=$WORKING_DIR/sentinel.hcl
-          
+        run: sentinel apply
+        working-directory: ./compliance/config
