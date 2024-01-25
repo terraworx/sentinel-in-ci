@@ -27,9 +27,9 @@ header = func(input, output) {
 		"\t========================================================================\n",
 		"\tPOLICY CHECK SUMMARY \n",
 		"\t========================================================================\n\t",
-		"ID            :" + input.id + "\n\t",
-		"Name          :" + input.name + "\n\t",
-		"Reference     :" + input.reference,
+		"ID:            " + input.id + "\n\t",
+		"Name:          " + input.name + "\n\t",
+		"Reference:     " + input.reference,
 	)
 	return null
 }
@@ -43,10 +43,9 @@ violations = func(input, output) {
 	for input.violations as violation {
 		print(
 			"\t",
-			"name          :" + violation.name + "\n\t",
-			"type          :" + violation.type + "\n\t",
-			"address       :" + violation.address + "\n\t",
-			"message       :" + violation.message + "\t\n",
+			"name:          " + violation.name + "\n\t",
+			"address:       " + violation.address + "\n\t",
+			"message:       " + violation.message + "\t\n",
 			"\t------------------------------------------------------------------------\t",
 		)
 	}
