@@ -14,7 +14,7 @@ jobs:
       - name: Setup Sentinel
         run: |
           mkdir /tmp/sentinel
-          curl -o /tmp/sentinel/sentinel.zip https://releases.hashicorp.com/sentinel/$VERSION/sentinel_$VERSION_linux_amd64.zip
+          curl -o /tmp/sentinel/sentinel.zip https://releases.hashicorp.com/sentinel/${VERSION}/sentinel_${VERSION}_linux_amd64.zip
           unzip -d /tmp/sentinel /tmp/sentinel/sentinel.zip
           echo "/tmp/sentinel" >> $GITHUB_PATH
 
