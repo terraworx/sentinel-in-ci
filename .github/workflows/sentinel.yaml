@@ -1,0 +1,23 @@
+name: Sentinel
+on: [pull_request]
+
+jobs:
+  sentinel:
+    name: Sentinel
+    runs-on: ubuntu-latest
+    env:
+      VERSION: '0.24.1'
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Sentinel
+        run: |
+          mkdir /tmp/sentinel
+          curl -o /tmp/sentinel/sentinel.zip https://releases.hashicorp.com/sentinel/${VERSION}/sentinel_${VERSION}_linux_amd64.zip
+          unzip -d /tmp/sentinel /tmp/sentinel/sentinel.zip
+          echo "/tmp/sentinel" >> $GITHUB_PATH
+
+      - name: Policy Evaluation
+        run: sentinel apply
+        working-directory: ./compliance/config
