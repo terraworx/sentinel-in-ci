@@ -25,12 +25,10 @@ jobs:
 
 ### Environment Variables
 - **VERSION:** Specifies the version of Sentinel to be used (default: '0.24.1').
-- **WORKING_DIR:** Specifies the working directory for Sentinel configuration files (default: 'compliance/config').
 
 ```yaml
 env:
     VERSION: '0.24.1'
-    WORKING_DIR: compliance/config
 ```
 
 ## Job Steps
