@@ -1,6 +1,6 @@
 # Sentinel GitHub Action
 
-This GitHub Action, named **Sentinel**, is designed to perform policy evaluations against Terraform plans within pull requests. It ensures that infrastructure-as-code adheres to defined policies using HashiCorp's Sentinel policy as code framework.
+This GitHub Action workflow, named **Sentinel**, is designed to perform policy evaluations against Terraform plans within pull requests. It ensures that infrastructure-as-code adheres to defined policies using HashiCorp's Sentinel policy as code framework.
 
 ## Workflow Configuration
 
