@@ -90,7 +90,7 @@
                             "values": {
                                 "id": "fakeserver-pgRebzZ9UPZFRs3B",
                                 "name": "SRV_ENV_1",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -105,7 +105,7 @@
                             "schema_version": 0,
                             "values": {
                                 "name": "SRV_ENV_11",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -120,7 +120,7 @@
                             "schema_version": 0,
                             "values": {
                                 "name": "SRV_ENV_12",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -135,7 +135,7 @@
                             "schema_version": 0,
                             "values": {
                                 "name": "SRV_ENV_13",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -150,7 +150,7 @@
                             "schema_version": 0,
                             "values": {
                                 "name": "SRV_ENV_14",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -165,7 +165,7 @@
                             "schema_version": 0,
                             "values": {
                                 "name": "SRV_ENV_15",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -181,7 +181,7 @@
                             "values": {
                                 "id": "fakeserver-MBKYv2UKAvvwVHop",
                                 "name": "SRV_ENV_2",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -197,7 +197,7 @@
                             "values": {
                                 "id": "fakeserver-XKZvd3gXJT1gvaKz",
                                 "name": "SRV_ENV_3",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
@@ -213,103 +213,194 @@
                             "values": {
                                 "id": "fakeserver-nRiUdY3C7VQFRwYJ",
                                 "name": "SRV_ENV_4",
-                                "type": "t2.micro",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
                         },
                         {
-                            "address": "module.stack.fakewebservices_server.server[4]",
+                            "address": "module.stack.fakewebservices_server.server[3]",
                             "mode": "managed",
                             "type": "fakewebservices_server",
                             "name": "server",
-                            "index": 4,
+                            "index": 3,
                             "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
                             "schema_version": 0,
                             "values": {
-                                "id": "fakeserver-zonASgnSssiukqLD",
-                                "name": "SRV_ENV_5",
-                                "type": "t2.micro",
+                                "id": "fakeserver-nRiUdY3C7VQFRwYJ",
+                                "name": "SRV_ENV_4",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
                         },
                         {
-                            "address": "module.stack.fakewebservices_server.server[5]",
+                            "address": "module.stack.fakewebservices_server.server[3]",
                             "mode": "managed",
                             "type": "fakewebservices_server",
                             "name": "server",
-                            "index": 5,
+                            "index": 3,
                             "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
                             "schema_version": 0,
                             "values": {
-                                "id": "fakeserver-hNKwHsyZJwaTkd9Q",
-                                "name": "SRV_ENV_6",
-                                "type": "t2.micro",
+                                "id": "fakeserver-nRiUdY3C7VQFRwYJ",
+                                "name": "SRV_ENV_4",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
                         },
                         {
-                            "address": "module.stack.fakewebservices_server.server[6]",
+                            "address": "module.stack.fakewebservices_server.server[10]",
                             "mode": "managed",
                             "type": "fakewebservices_server",
                             "name": "server",
-                            "index": 6,
+                            "index": 10,
                             "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
                             "schema_version": 0,
                             "values": {
-                                "id": "fakeserver-iX4VmNXWf5v5zy5g",
-                                "name": "SRV_ENV_7",
-                                "type": "t2.micro",
+                                "name": "SRV_ENV_11",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
                         },
                         {
-                            "address": "module.stack.fakewebservices_server.server[7]",
+                            "address": "module.stack.fakewebservices_server.server[11]",
                             "mode": "managed",
                             "type": "fakewebservices_server",
                             "name": "server",
-                            "index": 7,
+                            "index": 11,
                             "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
                             "schema_version": 0,
                             "values": {
-                                "id": "fakeserver-n1XhZPm2GWq1wWGN",
-                                "name": "SRV_ENV_8",
-                                "type": "t2.micro",
+                                "name": "SRV_ENV_12",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
                         },
                         {
-                            "address": "module.stack.fakewebservices_server.server[8]",
+                            "address": "module.stack.fakewebservices_server.server[12]",
                             "mode": "managed",
                             "type": "fakewebservices_server",
                             "name": "server",
-                            "index": 8,
+                            "index": 12,
                             "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
                             "schema_version": 0,
                             "values": {
-                                "id": "fakeserver-hngmm52g7ESAgGLy",
-                                "name": "SRV_ENV_9",
-                                "type": "t2.micro",
+                                "name": "SRV_ENV_13",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
                         },
                         {
-                            "address": "module.stack.fakewebservices_server.server[9]",
+                            "address": "module.stack.fakewebservices_server.server[13]",
                             "mode": "managed",
                             "type": "fakewebservices_server",
                             "name": "server",
-                            "index": 9,
+                            "index": 13,
                             "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
                             "schema_version": 0,
                             "values": {
-                                "id": "fakeserver-JWyeAGCVEJnfvhE9",
-                                "name": "SRV_ENV_10",
-                                "type": "t2.micro",
+                                "name": "SRV_ENV_14",
+                                "type": "c5.2xlarge",
+                                "vpc": "ENV_VPC"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.stack.fakewebservices_server.server[14]",
+                            "mode": "managed",
+                            "type": "fakewebservices_server",
+                            "name": "server",
+                            "index": 14,
+                            "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
+                            "schema_version": 0,
+                            "values": {
+                                "name": "SRV_ENV_15",
+                                "type": "c5.2xlarge",
+                                "vpc": "ENV_VPC"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.stack.fakewebservices_server.server[1]",
+                            "mode": "managed",
+                            "type": "fakewebservices_server",
+                            "name": "server",
+                            "index": 1,
+                            "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "fakeserver-MBKYv2UKAvvwVHop",
+                                "name": "SRV_ENV_2",
+                                "type": "c5.2xlarge",
+                                "vpc": "ENV_VPC"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.stack.fakewebservices_server.server[2]",
+                            "mode": "managed",
+                            "type": "fakewebservices_server",
+                            "name": "server",
+                            "index": 2,
+                            "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "fakeserver-XKZvd3gXJT1gvaKz",
+                                "name": "SRV_ENV_3",
+                                "type": "c5.2xlarge",
+                                "vpc": "ENV_VPC"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.stack.fakewebservices_server.server[3]",
+                            "mode": "managed",
+                            "type": "fakewebservices_server",
+                            "name": "server",
+                            "index": 3,
+                            "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "fakeserver-nRiUdY3C7VQFRwYJ",
+                                "name": "SRV_ENV_4",
+                                "type": "c5.2xlarge",
+                                "vpc": "ENV_VPC"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.stack.fakewebservices_server.server[3]",
+                            "mode": "managed",
+                            "type": "fakewebservices_server",
+                            "name": "server",
+                            "index": 3,
+                            "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "fakeserver-nRiUdY3C7VQFRwYJ",
+                                "name": "SRV_ENV_4",
+                                "type": "c5.2xlarge",
+                                "vpc": "ENV_VPC"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.stack.fakewebservices_server.server[3]",
+                            "mode": "managed",
+                            "type": "fakewebservices_server",
+                            "name": "server",
+                            "index": 3,
+                            "provider_name": "registry.terraform.io/hashicorp/fakewebservices",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "fakeserver-nRiUdY3C7VQFRwYJ",
+                                "name": "SRV_ENV_4",
+                                "type": "c5.2xlarge",
                                 "vpc": "ENV_VPC"
                             },
                             "sensitive_values": {}
