@@ -20,4 +20,4 @@ jobs:
 
       - name: Policy Evaluation
         run: sentinel apply
-        working-directory: ./compliance/config
+        working-directory: ./sentinel/policy_set
