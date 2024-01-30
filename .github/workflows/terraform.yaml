@@ -5,6 +5,7 @@ jobs:
   terraform:
     name: Terraform
     runs-on: ubuntu-latest
+    environment: PRD
     env:
       TF_VAR_fws_hostname: ${{ secrets.FWS_HOSTNAME }}
       TF_VAR_fake_token: ${{ secrets.FAKE_TOKEN }}
