@@ -1,5 +1,8 @@
 name: Sentinel
 on:
+  pull_request:
+    branches:
+      - main
   workflow_run:
     workflows: [Terraform]
     types:
