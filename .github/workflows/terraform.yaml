@@ -32,8 +32,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: terraform plan
-      continue-on-error: true
+      run: terraform plan -no-colour
       working-directory: ./terraform
 
     # - name: Terraform Show
