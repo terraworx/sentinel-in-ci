@@ -1,0 +1,45 @@
+name: Terraform
+on: [pull_request]
+
+jobs:
+  terraform:
+    name: Terraform
+    runs-on: ubuntu-latest
+    environment: PRD
+    env:
+      TF_VAR_fws_hostname: ${{ secrets.FWS_HOSTNAME }}
+      TF_VAR_fake_token: ${{ secrets.FAKE_TOKEN }}
+      TF_VAR_server_count: ${{ secrets.SERVER_COUNT }}
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_wrapper: false
+
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt -check
+      continue-on-error: true
+      working-directory: ./terraform
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+      working-directory: ./terraform
+
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+      working-directory: ./terraform
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -out=tfplan.plan
+      working-directory: ./terraform
+
+    - name: Terraform Show
+      id: show
+      run: terraform show -json tfplan.plan
+      continue-on-error: true
+      working-directory: ./terraform
