@@ -1,4 +1,4 @@
-name: Terraform
+name: Compliance
 on: [pull_request]
 
 jobs:
@@ -48,3 +48,30 @@ jobs:
       with:
         name: plan_json
         path: ./terraform/plan.json
+
+  sentinel:
+    name: Sentinel
+    needs: terraform
+    runs-on: ubuntu-latest
+    environment: PRD
+    env:
+      VERSION: '0.24.1'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan_json
+          path: ./terraform
+
+      - name: Setup Sentinel
+        run: |
+          mkdir /tmp/sentinel
+          curl -o /tmp/sentinel/sentinel.zip https://releases.hashicorp.com/sentinel/${VERSION}/sentinel_${VERSION}_linux_amd64.zip
+          unzip -d /tmp/sentinel /tmp/sentinel/sentinel.zip
+          echo "/tmp/sentinel" >> $GITHUB_PATH
+
+      - name: Policy Evaluation
+        run: sentinel apply
+        working-directory: ./sentinel/policy_set
