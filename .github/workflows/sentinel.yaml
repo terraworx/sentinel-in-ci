@@ -1,10 +1,15 @@
 name: Sentinel
-on: [pull_request]
+on:
+  workflow_run:
+    workflows: [Terraform]
+    types:
+      - completed
 
 jobs:
   sentinel:
     name: Sentinel
     runs-on: ubuntu-latest
+    environment: PRD
     env:
       VERSION: '0.24.1'
 
