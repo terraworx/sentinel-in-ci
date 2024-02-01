@@ -35,10 +35,14 @@ env:
 
 1. Checkout Code
 
-    This step checks out the repository's code.
+    This step checks out the `terraworx/policy-as-code-with-terraform` repository's code.
 
 ```yaml
-- uses: actions/checkout@v3
+- name: Checkout tools repo
+        uses: actions/checkout@v4
+        with:
+          repository: terraworx/policy-as-code-with-terraform
+          path: compliance
 ```
 
 2. Setup Sentinel
