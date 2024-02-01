@@ -77,5 +77,10 @@ jobs:
           echo "/tmp/sentinel" >> $GITHUB_PATH
 
       - name: Policy Evaluation
-        run: sentinel apply
+        run: sentinel apply -trace > results.json
         working-directory: ./compliance/policy_sets/fakewebservices
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sentinel_json
+          path: ./compliance/policy_sets/fakewebservices/sentinel.json
