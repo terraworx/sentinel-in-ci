@@ -69,6 +69,8 @@ jobs:
           name: plan_json
           path: ./terraform
 
+      - run: ls -r ${GITHUB_WORKSPACE}
+
       - name: Setup Sentinel
         run: |
           mkdir /tmp/sentinel
