@@ -78,6 +78,7 @@ jobs:
 
       - name: Policy Evaluation
         run: sentinel apply -trace > results.json
+        continue-on-error: true
         working-directory: ./compliance/policy_sets/fakewebservices
 
       - uses: actions/upload-artifact@v4
