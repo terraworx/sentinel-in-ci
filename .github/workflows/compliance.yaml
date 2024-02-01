@@ -58,7 +58,11 @@ jobs:
       VERSION: '0.24.1'
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout tools repo
+        uses: actions/checkout@v4
+        with:
+          repository: terraworx/policy-as-code-with-terraform
+          path: compliance
 
       - uses: actions/download-artifact@v4
         with:
@@ -74,4 +78,4 @@ jobs:
 
       - name: Policy Evaluation
         run: sentinel apply
-        working-directory: ./sentinel/policy_set
+        working-directory: ./compliance/policy_sets/fakeweb_services
