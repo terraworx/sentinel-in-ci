@@ -77,7 +77,7 @@ jobs:
           echo "/tmp/sentinel" >> $GITHUB_PATH
 
       - name: Policy Evaluation
-        run: sentinel apply -trace > results.json
+        run: sentinel apply -trace > sentinel.json
         continue-on-error: true
         working-directory: ./compliance/policy_sets/fakewebservices
 
