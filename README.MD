@@ -28,7 +28,7 @@ jobs:
 
 ```yaml
 env:
-    VERSION: '0.24.1'
+    STL_VERSION: '0.26.3'
 ```
 
 ## Job Steps
@@ -46,12 +46,11 @@ env:
     Downloads and sets up the Sentinel binary for policy evaluation.
 
 ```yaml
-- name: Setup Sentinel
-  run: |
-    mkdir /tmp/sentinel
-    curl -o /tmp/sentinel/sentinel.zip https://releases.hashicorp.com/sentinel/$VERSION/sentinel_$VERSION_linux_amd64.zip
-    unzip -d /tmp/sentinel /tmp/sentinel/sentinel.zip
-    echo "/tmp/sentinel" >> $GITHUB_PATH
+ - name: Setup Sentinel
+        uses: hashicorp/setup-sentinel@main
+        id: setup
+        with:
+          version: ${{ env.STL_VERSION }}
 ```
 
 3. Policy Evaluation
