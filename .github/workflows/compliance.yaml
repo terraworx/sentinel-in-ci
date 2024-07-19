@@ -77,4 +77,4 @@ jobs:
 
       - name: Policy Evaluation
         run: sentinel apply
-        working-directory: ./compliance/policy_sets/fakeweb_services
+        working-directory: compliance/policy_sets/fakeweb_services
