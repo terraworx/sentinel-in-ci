@@ -67,7 +67,7 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls -R
+          ls
 
       - uses: actions/download-artifact@v4
         with:
@@ -82,4 +82,4 @@ jobs:
 
       - name: Policy Evaluation
         run: sentinel apply
-        working-directory: ./compliance/policy_sets/fakeweb_services
+        working-directory: ./compliance/policy_sets/fakewebservices
