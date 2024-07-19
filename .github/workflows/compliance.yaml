@@ -64,11 +64,6 @@ jobs:
           repository: terraworx/policy-as-code-with-terraform
           path: ./compliance
 
-      - name: List Files
-        run: |
-          pwd
-          ls
-
       - uses: actions/download-artifact@v4
         with:
           name: plan_json
